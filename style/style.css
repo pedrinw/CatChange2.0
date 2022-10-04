@@ -6,14 +6,14 @@
     font-family:'Poppins', sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 body{
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100vw;
     height: 100vh;
+    background-color: #232528;
 }
 
 
@@ -22,8 +22,8 @@ body{
 .container-principal{
     margin: auto;
     width: 1135px;
-    height: 626px;
     display: flex;
+    
     
     
 }
@@ -32,13 +32,14 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    
     width: 500px;
 }
 
 .paragrafo-logo{
     font-size: 32px;
     font-weight: 600;
+    color: #fff;
 }
 
 .span{
@@ -59,6 +60,7 @@ body{
     font-weight: 600;
     font-size: 16px;
     margin-bottom: 8px;
+    color: #fff;
 }
 
 
@@ -71,6 +73,8 @@ body{
     font-size: 16px;
     font-weight: 500;
     padding-left: 10px;
+    color: #fff;
+    
 }
 .input-texto::placeholder{
     color: #717983;
@@ -88,7 +92,8 @@ body{
     border-radius: 10px;
     background-color: #DC602E;
     font-size: 15px;
-    color: black;
+    color: #232528;
+    
 }
 
 .botao:hover{
@@ -98,7 +103,8 @@ body{
 /* INFORMACOES DA API */
 
 .imagem-api{
-    height: 390px;
+    height: 350px;
+    width: 550px;
     margin-top: 35px;
     border-radius: 10px;
     
@@ -109,6 +115,7 @@ body{
     margin-top: 20px;
     font-weight: 500;
     font-size: 20px;
+    color: #fff;
 }
 
 
