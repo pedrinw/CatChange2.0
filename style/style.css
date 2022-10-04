@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family:'Poppins', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* SECTION LOGO */
+
+.container-principal{
+    margin: auto;
+    width: 1135px;
+    height: 626px;
+    display: flex;
+    
+    
+}
+
+.container-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 500px;
+}
+
+.paragrafo-logo{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.span{
+    color: #FFA400;
+}
+
+
+
+/* SECTION CONTEUDO */
+
+
+
+.container-conteudo{
+    padding: 20px 30px;
+}
+
+.paragrafo-pesquisar{
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+
+.input-texto{
+    width: 400px;
+    height: 35px;
+    border: 1.5px solid #363743;
+    border-radius: 10px;
+    background-color: #202128;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+.input-texto::placeholder{
+    color: #717983;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+
+.botao{
+    padding: 12px;
+    width: 100px;
+    margin-left: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #DC602E;
+    font-size: 15px;
+    color: black;
+}
+
+.botao:hover{
+    background-color: coral;
+}
+
+/* INFORMACOES DA API */
+
+.imagem-api{
+    height: 390px;
+    margin-top: 35px;
+    border-radius: 10px;
+    
+}
+
+
+.paragrafo-nome-gato{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
