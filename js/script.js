@@ -1,5 +1,6 @@
 let btn = document.querySelector("#botao")
+let campo = document.querySelector("#input-texto")
 
-btn.addEventListener("click", () => {
-    alert('funcionando')
+btn.addEventListener("click", (event) => {
+    alert("funcionando")
 })
