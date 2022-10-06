@@ -37,9 +37,10 @@ body{
     font-size: 32px;
     font-weight: 600;
     color: #fff;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .5);
 }
 
-.span{
+.span-cat{
     color: #FFA400;
 }
 
@@ -114,6 +115,7 @@ body{
 .imagem-api{
     height: 350px;
     width: 550px;
+    border-radius: 10px;
 }
 
 
@@ -122,8 +124,14 @@ body{
     font-weight: 500;
     font-size: 20px;
     color: #fff;
+    display: flex;
+    
+}
+.span-nome-gato{
+    color: #fff;
     text-transform: capitalize;
 }
+
 .msg-erro{
     font-family: 'Poppins', sans-serif;
     color: white;
