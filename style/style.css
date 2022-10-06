@@ -117,11 +117,12 @@ body{
 }
 
 
-.paragrafo-nome-gato{
+.figcaption-nome-gato{
     margin-top: 20px;
     font-weight: 500;
     font-size: 20px;
     color: #fff;
+    text-transform: capitalize;
 }
 .msg-erro{
     font-family: 'Poppins', sans-serif;

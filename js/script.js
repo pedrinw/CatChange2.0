@@ -1,61 +1,61 @@
-let btn = document.querySelector("#botao")
-let campo = document.querySelector("#input-texto")
-let divPai = document.querySelector("#divPai")
+let btn = document.querySelector("#botao");
+let campo = document.querySelector("#input-texto");
+let divPai = document.querySelector("#divPai");
+let imgApi = document.querySelector("#imgApi");
+let h2 = document.querySelector("#h2");
+let figure = document.querySelector("#figure")
+let figcaption = document.querySelector("#figure > figcaption")
 
 
-// quando a página for totalmente carregada, o overlay será desabilitado e a página irá aparecer
+async function getDados(nomeGato){
+    
+    const url = `http://34.176.250.192:8080/cat?name=${nomeGato}`;
 
-const overlay = document.querySelector(".overlay")
-console.log(overlay)
+    try {
+        const resultado = await fetch(url)
+        
+        if(resultado.status === 200){
+            const dados = await resultado.json();
+            
+            figure.style.display = "block";
+            h2.style.display = "none";
+
+            imgApi.setAttribute("src", `${dados.url}`)
+            imgApi.classList.add("imagem-api")
+            
+            
+            figcaption.textContent = `Nome do gato: ${campo.value}`;
+            figcaption.classList.add("figcaption-nome-gato")
+            
+
+        }
+        else if(resultado.status === 400){
+            figure.style.display = "none";
+            h2.textContent = "Nenhum gato encontrado"
+            h2.style.display = "block";
+
+            h2.classList.add("msg-erro")
+            
+        }
+
+
+        
+
+        
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+
+
+
 
 btn.addEventListener("click", (event)=>{
-        event.preventDefault();
-
-        if(campo.value == ''){
-            return;
-        }
-        
-        const status = [200, 500, 400];
-        const numero = Math.floor(Math.random() * status.length);
-
-        const response = {
-            status: status[numero],
-            data: {
-                name: "Gesomel",
-                url: "imagens/image (1).png"
-            }
-        }; 
-        console.log(response)
-        
-        if(response.status === 200){
-                
-            let img = document.createElement("img")
-            img.setAttribute("src", "imagens/image (1).png")
-            img.classList.add("imagem-api")
-
-            divPai.appendChild(img)
-
-            let sectionPai = document.querySelector("#sectionPai")
-
-            let p = document.createElement("p")
-            p.classList.add("paragrafo-nome-gato")
-            p.textContent = `Nome do gato: ${response.data.name} `
-            
-            sectionPai.appendChild(p)
-        }
-        else{
-            let h2 = document.createElement("h2")
-            h2.textContent = "Nenhum gato encontrado"
-            h2.classList.add("msg-erro")
-            divPai.appendChild(h2)
-            
-        }
-        
-
-
-        
-        
-    
+    event.preventDefault();
+    getDados(campo.value);
 })
 
 
