@@ -21,8 +21,8 @@ body{
 
 .container-principal{
     margin: auto;
-    width: 1135px;
     display: flex;
+    
 }
 
 .container-logo{
@@ -133,7 +133,6 @@ body{
 }
 
 .msg-erro{
-    font-family: 'Poppins', sans-serif;
     color: white;
     font-weight: 600;
 }
